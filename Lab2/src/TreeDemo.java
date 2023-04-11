@@ -64,31 +64,35 @@ class BinarySearchTree{
    public void preOrderTraversal(Node root){
       if (root == null) return;
 
-      System.out.print(root.value+" ");
+      System.out.print(root.value + " ");
       preOrderTraversal(root.left);
       preOrderTraversal(root.right);
    }
 
    /**
-    *Performs an in-order traversal of the BST and prints the nodes using recursion.
+    * Performs an in-order traversal of the BST and prints the nodes using recursion.
     *
-    *@param root the root node of the BST.
+    * @param root the root node of the BST.
     */
    public void inOrderTraversal(Node root){
       if(root == null) return;
 
       inOrderTraversal(root.left);
-      System.out.print(root.value+" ");
+      System.out.print(root.value + " ");
       inOrderTraversal(root.right);
    }
-   
-   
-   
-   /*
-   post-order traversal
-   */
+
+   /**
+    * Performs a post-order traversal of the BST and prints the nodes using recursion.
+    *
+    * @param root the root node of the BST.
+    */
    public void postOrderTraversal(Node root){
-      //implement me
+      if (root == null) return;
+
+      postOrderTraversal(root.left);
+      postOrderTraversal(root.right);
+      System.out.print(root.value + " ");
    }
    
    
