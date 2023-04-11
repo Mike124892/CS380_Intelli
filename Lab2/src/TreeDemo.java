@@ -31,11 +31,14 @@ class Node{
 class BinarySearchTree{
 
    Node root;
-   
-   
-   /*
-   recursive insert method
-   */
+
+   /**
+    * Inserts a value into the binary search tree using recursion.
+    *
+    * @param root the root node of the tree where the new node will be inserted.
+    * @param value the value to be inserted into the BST.
+    * @return the root node of the tree after the insertion.
+    */
    public Node insert(Node root, int value){
       //base case
       if(root == null){
@@ -52,14 +55,20 @@ class BinarySearchTree{
       
       return root;
    }
-   
-   
-   
-   /*
-   pre-order traversal
-   */
+
+
+
+   /**
+    * Performs a pre-order traversal of the BST and prints the nodes using recursion.
+    *
+    * @param root the root node of the BST.
+    */
    public void preOrderTraversal(Node root){
-      //implement me
+      if (root == null) return;
+
+      System.out.print(root.value+" ");
+      preOrderTraversal(root.left);
+      preOrderTraversal(root.right);
    }
 
    
