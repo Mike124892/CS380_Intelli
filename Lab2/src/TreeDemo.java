@@ -94,16 +94,26 @@ class BinarySearchTree{
       postOrderTraversal(root.right);
       System.out.print(root.value + " ");
    }
-   
-   
-   
-   /*
-   a method to find the node in the tree
-   with a specific value
-   */
+
+
+
+   /**
+    * Finds a node in the binary search tree with a specific value using recursion.
+    *
+    * @param root the root node of the BST.
+    * @param key the value to search for in the BST.
+    * @return true if the value is found in the BST, false otherwise.
+    */
    public boolean find(Node root, int key){
-	  //implement me
-      return false;           
+      if (root == null) return false;
+
+      if (root.value == key) return true;
+
+      if (key < root.value) {
+         return find(root.left,key);
+      } else {
+         return find (root.right,key);
+      }          
    }
    
    
