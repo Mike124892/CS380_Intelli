@@ -134,12 +134,18 @@ class BinarySearchTree{
 
 
 
-   /*
-   a method to find the node in the tree
-   with a largest key
-   */
+   /**
+    * Finds the largest value in the BST using recursion.
+    *
+    * @param root the root node of the BST.
+    * @return the maximum value.
+    */
    public int getMax(Node root){
-	  //implement me
+      while (root.right != null){
+         root = root.right;
+      }
+
+      return root.value;
    }
 
    /**
