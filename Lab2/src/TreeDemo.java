@@ -56,8 +56,6 @@ class BinarySearchTree{
       return root;
    }
 
-
-
    /**
     * Performs a pre-order traversal of the BST and prints the nodes using recursion.
     *
