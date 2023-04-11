@@ -94,9 +94,7 @@ class BinarySearchTree{
       postOrderTraversal(root.right);
       System.out.print(root.value + " ");
    }
-
-
-
+   
    /**
     * Finds a node in the binary search tree with a specific value using recursion.
     *
@@ -116,8 +114,6 @@ class BinarySearchTree{
       }
    }
 
-
-
    /**
     * Finds the smallest value in the BST using recursion.
     *
@@ -131,8 +127,6 @@ class BinarySearchTree{
 
       return root.value;
    }
-
-
 
    /**
     * Finds the largest value in the BST using recursion.
