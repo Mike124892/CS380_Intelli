@@ -113,17 +113,23 @@ class BinarySearchTree{
          return find(root.left,key);
       } else {
          return find (root.right,key);
-      }          
+      }
    }
-   
-   
-   
-   /*
-   a method to find the node in the tree
-   with a smallest key
-   */
+
+
+
+   /**
+    * Finds the smallest value in the BST using recursion.
+    *
+    * @param root the root node of the BST.
+    * @return the minimum value.
+    */
    public int getMin(Node root){
-      //implement me
+      while (root.left != null){
+         root = root.left;
+      }
+
+      return root.value;
    }
 
 
