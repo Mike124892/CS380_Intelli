@@ -94,7 +94,7 @@ class BinarySearchTree{
       postOrderTraversal(root.right);
       System.out.print(root.value + " ");
    }
-   
+
    /**
     * Finds a node in the binary search tree with a specific value using recursion.
     *
